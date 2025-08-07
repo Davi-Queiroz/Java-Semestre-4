@@ -5,6 +5,10 @@ public class Sensor {
     private List<Double> leituras;
     private String id;
 
+    public Sensor(String s) {
+    this.id=s;
+    }
+
     public List<Double> getLeitura(){
         return leituras;
     }
@@ -24,6 +28,7 @@ public class Sensor {
                 throw new LeituraInvalida(i,temp);
             }
         }
+        this.leituras = leituras;
     }
     String getId(){
         return "aaa";
